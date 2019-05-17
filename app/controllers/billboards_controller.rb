@@ -16,9 +16,9 @@ class BillboardsController < ApplicationController
     @billboard = Billboard.new(billboard_params)
 
     if @billboard.save
-      redirect_to billboard_path
+      redirect_to billboards_path
     else
-      render :new
+      render new
     end
   end
 
@@ -29,7 +29,7 @@ class BillboardsController < ApplicationController
     if @billboard.update(billboard_params)
       redirect_to billboard_path(@billboard)
     else
-      render :edit
+      render :new
     end
   end
 

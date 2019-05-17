@@ -35,10 +35,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'semantic-ui-sass'
 
 group :development, :test do
   # Call 'pry' anywhere in the code to stop execution and get a debugger console
   gem "pry", platforms: [:mri, :mingw, :x64_mingw]
+  gem 'faker'
 end
 
 group :development do

@@ -1,0 +1,18 @@
+<%= form_with(model: billboard, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :chart %>
+    <%= f.text_field :chart, required: true, placeholder: "Chart", autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :genre %>
+      <%= f.text_field :genre, required: true, placeholder: "Genre" %>
+      </div>
+
+    <div class="field">
+      <%= f.label :week %> 
+      <%= f.date_field :week, required: true, placeholder: "Week" %>
+    </div>
+
+  <%= f.submit nil, class: "uibutton" %>
+<% end %>

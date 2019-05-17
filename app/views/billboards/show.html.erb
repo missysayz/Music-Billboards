@@ -1,2 +1,21 @@
-<h1>Billboards#show</h1>
-<p>Find me in app/views/billboards/show.html.erb</p>
+
+<div class="ui card">
+  <div class="image">
+    <img src="https://robohash.org/<%= @billboard.chart %>?set=set4" />
+  </div>
+  <div class="content">
+    <p class="header">
+      <%= @billboard.genre %> <%= @billboard.week %>
+    </p>
+    <div class="meta">
+      <span class="date"><%= @billboard.chart %></span>
+    </div>
+    <div class="description">
+      <%= @billboard.genre %>
+    </div>
+  </div>
+  <div class="extra content">
+    <%= link_to "Edit", edit_billboard_path(@billboard), class: "ui button blue" %> 
+    <%= link_to "Back", billboards_path, class: "ui button" %>
+  </div>
+</div>

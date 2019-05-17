@@ -1,2 +1,32 @@
-<h1>Billboards#index</h1>
-<p>Find me in app/views/billboards/index.html.erb</p>
+
+<h1 class="ui header">Billboards<h1>
+
+<div class="ui grid">
+  <% @billboard.each do |billboard| %>
+    <div class="sixteen wide mobile eight wide tablet four wide computer column">
+      <div class="ui card">
+        <div class="image">
+          <img src="https://robohash.org/<%= billboard.chart %>?set=set4" />
+        </div>
+        <div class="content">
+          <%= link_to billboard.chart, billboard_path(billboard), class: "header" %>
+        </div>
+        <div class="extra content">
+          <div class="ui two buttons">
+            <%= link_to(edit_billboard_path(billboard)) do %>
+              <div class="ui basic green button">
+                Edit
+              </div>
+            <% end %>
+            
+            <%= link_to(billboard_path(billboard), method: :delete, data: { confirm: "Are you sure?" }) do %>
+              <div class="ui basic red button">
+                Delete
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
