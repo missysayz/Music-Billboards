@@ -5,17 +5,30 @@
   </div>
   <div class="content">
     <p class="header">
-      <%= @billboard.genre %> <%= @billboard.week %>
     </p>
     <div class="meta">
       <span class="date"><%= @billboard.chart %></span>
     </div>
     <div class="description">
       <%= @billboard.genre %>
+      <br/>
+      <%= "Week of:"%> <%=" "%> <%=@billboard.week %>
     </div>
+<% @artists.each do |artist| %>
+<ul>
+  <li>
+    <%= artist.first_name %> <%= " " %><%= artist.last_name %>
+    <%= link_to "Show", billboard_artist_path(@billboard, artist) %>
+  </li>
+</ul>
+<% end %>
   </div>
   <div class="extra content">
     <%= link_to "Edit", edit_billboard_path(@billboard), class: "ui button blue" %> 
     <%= link_to "Back", billboards_path, class: "ui button" %>
+   
   </div>
 </div>
+
+
+<%#("%B-%e-%Y") Date format? %>

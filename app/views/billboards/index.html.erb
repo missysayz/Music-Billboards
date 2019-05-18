@@ -6,19 +6,18 @@
     <div class="sixteen wide mobile eight wide tablet four wide computer column">
       <div class="ui card">
         <div class="image">
-          <img src="https://robohash.org/<%= billboard.chart %>?set=set4" />
+          <img src="https://robohash.org/<%= billboard.chart %>?set=set3" />
         </div>
         <div class="content">
           <%= link_to billboard.chart, billboard_path(billboard), class: "header" %>
         </div>
         <div class="extra content">
           <div class="ui two buttons">
-            <%= link_to(edit_billboard_path(billboard)) do %>
+          <%= link_to(billboard_path(billboard)) do %>
               <div class="ui basic green button">
-                Edit
+                show
               </div>
             <% end %>
-            
             <%= link_to(billboard_path(billboard), method: :delete, data: { confirm: "Are you sure?" }) do %>
               <div class="ui basic red button">
                 Delete
