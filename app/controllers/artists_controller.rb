@@ -20,7 +20,7 @@ class ArtistsController < ApplicationController
       @artist = Artist.new(artist_params)
 
       if @artist.save
-        redirect_to (@artist)
+        redirect_to billboard_artist_path(@billboard,@artist)
       else
         render partial: "form"
       end
@@ -32,7 +32,7 @@ class ArtistsController < ApplicationController
 
   def update
     if @artist.update(artist_params)
-      redirect_to [@artist]
+      redirect_to billboard_artist_path(@billboard,@artist)
     else
       render partial: "form"
     end

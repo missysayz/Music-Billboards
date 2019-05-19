@@ -1,3 +1,9 @@
-<% @artists.each do |artist|%>
-    <%= link_to artist.first_name, artist_songs_path(artist.id) %> 
-<% end %>
+<h1>Click an Artist To View</h1>
+<%= link_to 'Add Artist', new_billboard_artist_path(@billboard) %>
+<ul>
+  <% @artists.each do |artist|%>
+    <li><%= artist.first_name, artist_songs_path(artist.id) %></li>
+  <% end %>
+</ul>
+<%= link_to "Back", billboards_path %>
+

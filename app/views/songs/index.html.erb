@@ -1,3 +1,8 @@
-<h1>Click a Song To View It</h1>
+<h1> <%= @artist.first_name %><%=" "%><%=@artist.last_name%> <%= "Songs"%> </h1>
 
-<%= link_to "Back", billboards_path%>
+
+<%= link_to 'Edit', edit_artist_song_path(@artist, @songs) %> 
+<%= link_to 'Delete', artist_song_path(@artist, @song), method: :delete %>
+
+<%= link_to 'Back  ', artist_path(@artist) %>
+

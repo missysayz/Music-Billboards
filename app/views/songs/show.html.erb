@@ -1,9 +1,8 @@
-<h1><%= song.title %></h1>
+<h1><%= %> <%= "Songs"%> </h1>
 
+<h2><%= @song.title %>
+<br />
+<br />
 
-  </li>
-</ul>
-<% end %>
-
-
-<%= link_to "Back", billboard_path(@billboard) %>
+<%= link_to "Back", artist_songs_path(@artist) %>
+<%= link_to "Edit", artist_song_path(@artist,@song) %>

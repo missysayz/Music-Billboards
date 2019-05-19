@@ -1,19 +1,9 @@
 <h1> <%= @artist.first_name %><%=" "%><%=@artist.last_name%> </h1>
-<h4></h4>
-<h4>
-<h4>
-</h4></h4>
-<br />
-<h2></h2>
-<%  %>
-  <%= %>
-<%  %>
-<br />
-<%=  %>
-<br />
-<br />
-<%= link_to 'Edit Artist', edit_billboard_artist_path([@billboard, @artist]) %> |
-<%= link_to 'Back To Billboard', billboard_path(@billboard) %>
-<%= link_to "Songs", artist_song_path(@artist)%>
 
-<div 
+
+<%= link_to 'Edit  ', edit_billboard_artist_path([@billboard, @artist]) %> 
+<%= link_to 'Delete  ', billboard_artist_path(@billboard, @artist), method: :delete %>
+
+<%= link_to 'Back  ', billboard_path(@billboard) %>
+<%= link_to "Songs", artist_songs_path(@artist)%>
+
