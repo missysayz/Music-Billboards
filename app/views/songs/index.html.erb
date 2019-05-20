@@ -1,3 +1,10 @@
 <h1>Click a Song To View It</h1>
 
+<%= @songs.each do |song| %>
+    <%= link_to artist_songs_path(@artist) %>
+
 <%= link_to "Back", billboards_path%>
+
+
+
+<

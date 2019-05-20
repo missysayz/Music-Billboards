@@ -1,0 +1,8 @@
+%= form_with(model: @song, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, required: true, placeholder: "First Name", autofocus: true %>
+    </div>
+
+  <%= f.submit nil, class: "uibutton" %>
+<% end %>

@@ -14,6 +14,8 @@
       <br/>
       <%= "Week of:"%> <%=" "%> <%=@billboard.week %>
     </div>
+
+    <h4><%=link_to "Add New Artist", new_billboard_artist_path(@billboard), class: "ui button blue" %>
 <% @artists.each do |artist| %>
 <ul>
   <li>
