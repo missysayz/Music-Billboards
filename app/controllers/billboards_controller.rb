@@ -17,7 +17,7 @@ class BillboardsController < ApplicationController
     @billboard = Billboard.new(billboard_params)
 
     if @billboard.save
-      redirect_to billboards_path
+      redirect_to billboards_path(@billboard)
     else
       render new
     end

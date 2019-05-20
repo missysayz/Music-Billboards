@@ -1,5 +1,12 @@
-<h1>Click a Song To View It</h1>
+<h1> <%= @artist.first_name %><%=" "%><%=@artist.last_name%> <%= "Songs"%> </h1>
 
+
+<%= link_to 'Edit', edit_artist_song_path(@artist, @songs) %> 
+<%= link_to 'Delete', artist_song_path(@artist, @song), method: :delete %>
+
+<%= link_to 'Back  ', artist_path(@artist) %>
+
+<<<<<<< HEAD
 <%= @songs.each do |song| %>
     <%= link_to artist_songs_path(@artist) %>
 
@@ -8,3 +15,5 @@
 
 
 <
+=======
+>>>>>>> 2236a9715579f17b697c9d9379429bf55284326d

@@ -19,7 +19,11 @@ class ArtistsController < ApplicationController
       @artist = @billboard.artists.new(artist_params)
 
       if @artist.save
+<<<<<<< HEAD
         redirect_to billboard_artist_path(@billboard.id, @artist.id)
+=======
+        redirect_to billboard_artist_path(@billboard,@artist)
+>>>>>>> 2236a9715579f17b697c9d9379429bf55284326d
       else
         render :new
       end
@@ -31,7 +35,11 @@ class ArtistsController < ApplicationController
 
   def update
     if @artist.update(artist_params)
+<<<<<<< HEAD
       redirect_to [@billboard, @artist]
+=======
+      redirect_to billboard_artist_path(@billboard,@artist)
+>>>>>>> 2236a9715579f17b697c9d9379429bf55284326d
     else
       render partial: "form"
     end

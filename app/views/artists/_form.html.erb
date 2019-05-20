@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%= form_with(model: @artist, local: true, class: "ui form") do |f| %>
   <div class="field">
     <%= f.label :first_name %>
@@ -11,3 +12,17 @@
 
   <%= f.submit nil, class: "uibutton" %>
 <% end %>
+=======
+<h1><%= @artist.id ? 'Edit Artist' : 'Create Artist' %></h1>
+<hr />
+<%= form_with(model: [@billboard, @artist], local: true, class: "ui form") do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true, autofocus: true %>
+  <br />
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %>
+  <br />
+  <br />
+  <%= f.submit nil, class: "ui button" %>
+<% end %>
+>>>>>>> 2236a9715579f17b697c9d9379429bf55284326d
