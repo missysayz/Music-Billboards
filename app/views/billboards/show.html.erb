@@ -15,19 +15,16 @@
       <%= "Week of:"%> <%=" "%> <%=@billboard.week %>
     </div>
 
-    <h4><%=link_to "Add New Artist", new_billboard_artist_path(@billboard), class: "ui button blue" %>
-<% @artists.each do |artist| %>
-<ul>
-  <li>
-    <%= artist.first_name %> <%= " " %><%= artist.last_name %>
-    <%= link_to "Show", billboard_artist_path(@billboard, artist) %>
-  </li>
-</ul>
-<% end %>
+    <h4><%=link_to "Add New Song", new_billboard_song_path(@billboard), class: "ui button blue" %><h4>
+    <% @songs.each do |song|%>
+    <ol>
+    <li>
+    <%= song.title %></li>
+    <%= link_to "Show", billboard_song_path(@billboard, song) %>
+  </ol>
+  <% end %>
 
-<%= link_to "Add New Artist", new_billboard_artist_path(@billboard), class: "ui button red"%>
-  </div>
-  <div class="extra content">
+    <div class="extra content">
     <%= link_to "Edit", edit_billboard_path(@billboard), class: "ui button blue" %> 
     <%= link_to "Back", billboards_path, class: "ui button" %>
    

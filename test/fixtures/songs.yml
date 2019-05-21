@@ -2,8 +2,10 @@
 
 one:
   title: MyString
+  billboard: one
   artist: one
 
 two:
   title: MyString
+  billboard: two
   artist: two

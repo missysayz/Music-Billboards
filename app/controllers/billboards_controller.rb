@@ -2,11 +2,11 @@ class BillboardsController < ApplicationController
   before_action :set_billboard, only: [:show, :edit, :update, :destroy]
   
   def index
-    @billboard = Billboard.all
+    @billboards = Billboard.all
   end
 
   def show
-    @artists = @billboard.artists
+    @songs = @billboard.songs
   end
 
   def new
