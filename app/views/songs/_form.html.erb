@@ -1,6 +1,9 @@
 <h1><%= @song.id ? 'Edit Song' : 'Create Song' %></h1>
 <hr />
-<%= form_with(model: [@billboard, @song], local: true, class: "row") do |f| %>
+<%= form_with(model: [@billboard, @song], local: true, class: "ui form") do |f| %>
+  <%= f.label :artist %>
+  <%= f.select :artist_id, @artists.collect { |a| [a.first_name + " " + a.last_name, a.id] } %>
+  <br />
   <%= f.label :title %>
   <%= f.text_field :title, required: true, autofocus: true, placeholder: "Title" %>
   <br />
